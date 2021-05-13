@@ -12,5 +12,18 @@ module.exports = {
     contentBase: path.join(__dirname, 'src'),
     hot: true,
     port: 3000
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader","css-loader"]
+      },
+      {
+        test: /\.(png|jpg|svg)$/i,
+        type: 'asset/resource'
+      }
+      
+    ]
   }
 }
